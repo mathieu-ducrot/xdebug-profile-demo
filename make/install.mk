@@ -3,9 +3,11 @@
 init-rw-files:
 	sudo mkdir -p ./var/cache
 	sudo chmod -R 777 ./var/cache
+	sudo mkdir -p ./var/log
 	sudo chmod -R 777 ./var/log
-	mkdir -p public/files
+	sudo mkdir -p public/files
 	sudo chmod -R 777 public/files
+	sudo chmod -R 777 docker/xdebug_profile/
 
 .PHONY: install-symfony
 install-symfony:

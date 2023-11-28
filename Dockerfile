@@ -67,6 +67,7 @@ RUN adduser dev sudo
 # PHP config
 COPY --link docker/.bashrc /home/dev/.bashrc
 COPY --link docker/php/conf.d/app.ini $PHP_INI_DIR/conf.d/
+COPY --link docker/php/conf.d/xdebug.ini $PHP_INI_DIR/conf.d/
 
 # Apache config
 COPY --link docker/apache/vhost.conf /etc/apache2/sites-available/000-default.conf

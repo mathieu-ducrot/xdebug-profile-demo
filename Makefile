@@ -24,7 +24,7 @@ install-script: ## Install script using project packages config and setting up d
 	make assets-dev
 	# Stopping the install at this step if the doctrine-fixtures-bundle is not installed or if the minimal/fake groups are not defined
 	make orm-install
-	make orm-load-fake
+	# make orm-load-fake
 	echo Install complete!
 
 .PHONY: update

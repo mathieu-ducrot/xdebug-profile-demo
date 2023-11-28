@@ -8,7 +8,7 @@ orm-install: ## Create the databse + Loading minimales fixtures. For production 
 	$(CONSOLE) doctrine:schema:update --force --env=$(ENV)
 	$(CONSOLE) doctrine:migrations:sync-metadata-storage --env=$(ENV)
 	$(CONSOLE) doctrine:migrations:version --add --all --no-interaction --env=$(ENV)
-	make orm-load-minimal
+	# make orm-load-minimal
 
 .PHONY: orm-sync-force
 orm-sync-force: ## Force the database schema to be sync with the mapping files

@@ -13,9 +13,12 @@ services:
     volumes:
       - ./:/app
       - ./var/log/php/:/app/var/log
+      - ./docker/xdebug_profile/:/tmp/docker_xdebug/
     extra_hosts:
       # Ensure that host.docker.internal is correctly defined on Linux
       - host.docker.internal:host-gateway
+    environment:
+      XDEBUG_MODE: ${XDEBUG_MODE}
 
   mysql:
     image: mysql:8.0
